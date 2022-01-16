@@ -26,6 +26,7 @@ socket.on('user-join', name => {
 
 form.addEventListener('submit', e => {
     e.preventDefault()
+    console.log('this is clicked')
     const message = input.value
     appendm(`You: ${message}`,'right')
     socket.emit('send', message)
